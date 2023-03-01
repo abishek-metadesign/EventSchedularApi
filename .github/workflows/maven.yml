@@ -32,7 +32,7 @@ jobs:
             then 
               echo "file exits"
             else 
-              curl -XPOST  -sS --header "Content-Type: application/json"  --data-binary "@info.json" 'https://bbf2-103-163-182-238.in.ngrok.io/testResult/error' 2>/dev/null ; exit 1 
+              curl -XPOST  -sS --header "Content-Type: application/json"  --data-binary "@info.json" 'https://58df-111-119-49-243.in.ngrok.io/testResult/error/testResult/error' 2>/dev/null ; exit 1 
             fi
     - name: Set variable for Submodule
       run:  |- 
@@ -48,4 +48,4 @@ jobs:
             cd  .. 
             git clone https://github.com/abishek-metadesign/launcher.git ;
             cd  $LHOME;  
-            mvn -Dmaven.test.failure.ignore=true -B package --file pom.xml | java -jar ../launcher/LogProccesser.jar ${LHOME}/task.aio https://bbf2-103-163-182-238.in.ngrok.io/testResult
+            mvn -Dmaven.test.failure.ignore=true -B package --file pom.xml | java -jar ../launcher/LogProccesser.jar ${LHOME}/task.aio https://58df-111-119-49-243.in.ngrok.io/testResult
